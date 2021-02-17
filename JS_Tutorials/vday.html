@@ -44,13 +44,13 @@
 
  const pointB = { 
     type: "point",
-    longitude: 44.29262,
-    latitude: -78.31098
+    longitude: -78.30851,
+    latitude: 44.31185
  };
-
+ 
  const simpleMarkerSymbolB = { // sets symbology for point
     type: "simple-marker",
-    color: "pink",  
+    color: [255, 20, 147],  // Pink
     outline: {
         color: [255, 255, 255], // White
         width: 1
@@ -60,9 +60,11 @@
   // Add a pop-up for the polygon layer on a click
   const popupTemplateB = { // defines the pop-up with empty attributes
     title: "{Name}",
+    content: "{Description}"
  }
  const attributesB = { // applies the attributes to the pop-up
-    Name: "McKnight's",
+    Name: "East City Flower Shop",
+    Description: "Located on Rogers Street"
  } 
  
  const pointGraphicB = new Graphic({
@@ -73,69 +75,113 @@
  });
  
  graphicsLayer.add(pointGraphicB); // add the newly created point to the graphics layer
-
- const pointC = { 
-    type: "point",
-    longitude: -78.33324,
-    latitude: 44.28567
- };
-
- const pointD = { 
-    type: "point",
-    longitude: -78.35021,
-    latitude: 44.28579
- };
-
- const pointE = { 
-    type: "point",
-    longitude: -78.32635,
-    latitude: 44.30173
- };
-
- const pointF = { 
-    type: "point",
-    longitude: -78.32706,
-    latitude: 44.30540
- };
-
- const pointG = { 
-    type: "point",
-    longitude: -78.32158,
-    latitude: 44.30616
- };
-
- const pointH = { 
-    type: "point",
-    longitude: -78.32282,
-    latitude: 44.30742
- };
-
- const pointA = { 
-    type: "point",
-    longitude: -78.30851,
-    latitude: 44.31185
- };
-
- const pointI = { 
+ 
+ // The Freedom Monument
+ const pointP = { 
     type: "point",
     longitude: -78.33130,
     latitude: 44.31905
  };
-
- const pointJ = { 
-    type: "point",
-    longitude: -78.36116,
-    latitude: 44.32335
- };
-
- const simpleMarkerSymbol = {
+ 
+ const simpleMarkerSymbolP = { // sets symbology for point
     type: "simple-marker",
-    color: "pink",  // red
+    color: [255, 20, 147],  // Pink
     outline: {
         color: [255, 255, 255], // White
         width: 1
     }
  };
+ // use this to set the point graphic
+  // Add a pop-up for the polygon layer on a click
+  const popupTemplateP = { // defines the pop-up with empty attributes
+    title: "{Name}",
+    content: "{Description}"
+ }
+ const attributesP = { // applies the attributes to the pop-up
+    Name: "Flowers By Kay",
+    Description: "Located on Chemong Road"
+ } 
+ 
+ const pointGraphicP = new Graphic({
+    geometry: pointP,
+    symbol: simpleMarkerSymbolP, 
+    attributes: attributesP,
+    popupTemplate: popupTemplateP
+ });
+ 
+ graphicsLayer.add(pointGraphicP); // add the newly created point to the graphics layer
+ 
+ 
+ const pointC = { 
+    type: "point",
+    longitude: -78.36123,
+    latitude: 44.32203
+ };
+ 
+ const simpleMarkerSymbolC = { // sets symbology for point
+    type: "simple-marker",
+    color: [255, 20, 147],  // Pink
+    outline: {
+        color: [255, 255, 255], // White
+        width: 1
+    }
+ };
+ // use this to set the point graphic
+  // Add a pop-up for the polygon layer on a click
+  const popupTemplateC = { // defines the pop-up with empty attributes
+    title: "{Name}",
+    content: "{Description}"
+ }
+ const attributesC = { // applies the attributes to the pop-up
+    Name: "Petal Fusion Florals",
+    Description: "Located on Lily Lake Road"
+ } 
+ 
+ const pointGraphicC = new Graphic({
+    geometry: pointC,
+    symbol: simpleMarkerSymbolC, 
+    attributes: attributesC,
+    popupTemplate: popupTemplateC
+ });
+ 
+ graphicsLayer.add(pointGraphicC); // add the newly created point to the graphics layer
+ 
+ 
+ const pointC = { 
+    type: "point",
+    longitude: 44.29262,
+    latitude: -78.31098
+ };
+ 
+ const simpleMarkerSymbolC = { // sets symbology for point
+    type: "simple-marker",
+    color: [255, 20, 147],  // Pink
+    outline: {
+        color: [255, 255, 255], // White
+        width: 1
+    }
+ };
+ // use this to set the point graphic
+  // Add a pop-up for the polygon layer on a click
+  const popupTemplateC = { // defines the pop-up with empty attributes
+    title: "{Name}",
+    content: "{Description}"
+ }
+ const attributesC = { // applies the attributes to the pop-up
+    Name: "McKnights",
+    Description: "Located on Lansdowne Street West"
+ } 
+ 
+ const pointGraphicC = new Graphic({
+    geometry: pointC,
+    symbol: simpleMarkerSymbolC, 
+    attributes: attributesC,
+    popupTemplate: popupTemplateC
+ });
+ 
+ graphicsLayer.add(pointGraphicC); // add the newly created point to the graphics layer
+ 
+ });
 
  const pointGraphic = new Graphic({
     geometry: point,
