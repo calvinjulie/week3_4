@@ -19,18 +19,13 @@
         font-family: "Arial Black", sans-serif
     }
 
-    .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .header {
-      background-color:#e64a64;
-      text-align: center;
-      padding: 10px;
-      color:white;
-      }
+
+    h1 {
+          text-align: center;
+          color: rgb(185, 0, 93);
+          padding: 20px;
+          margin: 10px;
+        }
 
     p{
         font-family: 'sans-serif', Verdana, Tahoma;
@@ -52,14 +47,6 @@
         border-width: medium;
     }
 
-   .footer {
-        background-color: #ff0055;
-        text-align: center;
-        padding: 1px;
-        color:white;
-        font-size: 12px;
-        font-family: 'Courier New';
-   }
   </style>
   <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
   <script src="https://js.arcgis.com/4.18/"></script>
@@ -431,18 +418,17 @@
     <body>
         <div class="container">
           <img src="funny_valentines_day_cards_banner.png" alt="val" width="440" height="200" style="width:100%;">
-          <div class="centered"> Flower Shops in Peterborough</div>
-      
-        </div>  
+            
+        </div> 
+        <h1>Flower Shops in Peterborough </h1> 
           <div>
           <p> Don't know where to buy flowers for you loved ones this Valentines day? Explore this map to find the perfect place to pick up flowers in Peterborough!</p>
           <p>Click on each location to learn the name of the specified flower shop!</p>
       
           </div>
       
-          <!-- use the id of the map to call in the map function-->
+          <!-- call in the map function-->
         <div id="viewDiv"></div>
-        </div>
       
     </body>
 </html>
