@@ -1,1 +1,82 @@
+<html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS API for JavaScript Tutorials: Add a point, line, and polygon</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.18/"></script>
+  <script>
 
+  require([
+    "esri/config",
+    "esri/Map",
+    "esri/views/MapView",
+
+    "esri/Graphic",
+    "esri/layers/GraphicsLayer"
+
+    ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer) {
+
+  esriConfig.apiKey = "AAPK2d90fefddea04ac7bb55a5c9845943b4Wrnc330TCE52RmSJYXaoN8p5tUpeGRnFrdV4EnAZDda0e7JQIqZDktV9Jy4ifRPZ";
+
+  const map = new Map({
+    basemap: "arcgis-topographic" //Basemap layer service
+  });
+
+  const view = new MapView({
+    map: map,
+    center: [44.3091,78.3197], //Longitude, latitude
+    zoom: 13,
+    container: "viewDiv"
+ });
+
+ const graphicsLayer = new GraphicsLayer();
+ map.add(graphicsLayer);
+
+ const point = { //Create a point
+    type: "point",
+    paths: [
+        [44.29262, -78.31098],
+        [44.28567, -78.33324],
+        [44.28579, -78.35021],
+        [44.30173, -78.32635],
+        [44.30540, -78.32706],
+        [44.30616, -78.32158],
+        [44.30742, -78.32282],
+        [44.31185, -78.30851],
+        [44.31905, -78.33130],
+        [44.32335, -78.36116]
+    ]
+ };
+ const simpleMarkerSymbol = {
+    type: "simple-marker",
+    color: "red",  // red
+    shape: "heart",
+    outline: {
+        color: [255, 255, 255], // White
+        width: 1
+    }
+ };
+
+ const pointGraphic = new Graphic({
+    geometry: point,
+    symbol: simpleMarkerSymbol
+ });
+ graphicsLayer.add(pointGraphic);
+
+ });
+</script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
