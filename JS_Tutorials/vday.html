@@ -5,12 +5,61 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Flower Shops in Peterborough</title>
   <style>
-    html, body, #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
+    html, 
+    body {
+       height: 100%;
+       background-color: #e64a64;
     }
+
+    .container {
+        position: relative;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 48pt;
+        font-family: "Arial Black", sans-serif
+    }
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .header {
+      background-color:#e64a64;
+      text-align: center;
+      padding: 10px;
+      color:white;
+      }
+
+    p{
+        font-family: 'sans-serif', Verdana, Tahoma;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        color:white;
+        line-height: inherit;
+    }
+
+    #viewDiv {
+        padding: 0;
+        margin:auto;
+        align-content: center;
+        height: 100%;
+        width: 100%;
+        border-style: solid;
+        border-color: #ffffff;
+        border-width: medium;
+    }
+
+   .footer {
+        background-color: #ff0055;
+        text-align: center;
+        padding: 1px;
+        color:white;
+        font-size: 12px;
+        font-family: 'Courier New';
+   }
   </style>
   <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
   <script src="https://js.arcgis.com/4.18/"></script>
@@ -50,19 +99,18 @@
  
  const simpleMarkerSymbolB = { // sets symbology for point
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateB = { // defines the pop-up with empty attributes
+ 
+  const popupTemplateB = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesB = { // applies the attributes to the pop-up
+ const attributesB = { 
     Name: "East City Flower Shop",
     Description: "Located on Rogers Street"
  } 
@@ -74,30 +122,28 @@
     popupTemplate: popupTemplateB
  });
  
- graphicsLayer.add(pointGraphicB); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicB); 
  
- // The Freedom Monument
  const pointP = { 
     type: "point",
     longitude: -78.33130,
     latitude: 44.31905
  };
  
- const simpleMarkerSymbolP = { // sets symbology for point
+ const simpleMarkerSymbolP = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateP = { // defines the pop-up with empty attributes
+ 
+  const popupTemplateP = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesP = { // applies the attributes to the pop-up
+ const attributesP = { 
     Name: "Flowers By Kay",
     Description: "Located on Chemong Road"
  } 
@@ -109,7 +155,7 @@
     popupTemplate: popupTemplateP
  });
  
- graphicsLayer.add(pointGraphicP); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicP); 
  
  
  const pointC = { 
@@ -118,21 +164,20 @@
     latitude: 44.32203
  };
  
- const simpleMarkerSymbolC = { // sets symbology for point
+ const simpleMarkerSymbolC = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateC = { // defines the pop-up with empty attributes
+
+  const popupTemplateC = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesC = { // applies the attributes to the pop-up
+ const attributesC = { 
     Name: "Petal Fusion Florals",
     Description: "Located on Lily Lake Road"
  } 
@@ -144,7 +189,7 @@
     popupTemplate: popupTemplateC
  });
  
- graphicsLayer.add(pointGraphicC); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicC); 
  
  
  const pointD = { 
@@ -153,21 +198,20 @@
     latitude: 44.29262
  };
  
- const simpleMarkerSymbolD = { // sets symbology for point
+ const simpleMarkerSymbolD = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateD = { // defines the pop-up with empty attributes
+ 
+  const popupTemplateD = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesD = { // applies the attributes to the pop-up
+ const attributesD = { 
     Name: "McKnights",
     Description: "Located on Lansdowne Street West"
  } 
@@ -179,7 +223,7 @@
     popupTemplate: popupTemplateD
  });
  
- graphicsLayer.add(pointGraphicD); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicD); 
 
  const pointA = { 
     type: "point",
@@ -187,21 +231,20 @@
     latitude: 44.28373
  };
  
- const simpleMarkerSymbolA = { // sets symbology for point
+ const simpleMarkerSymbolA = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255],
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateA = { // defines the pop-up with empty attributes
+ 
+  const popupTemplateA = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesA = { // applies the attributes to the pop-up
+ const attributesA = { 
     Name: "Rambling Rose Flowers",
     Description: "Located on Borden Avenue"
  } 
@@ -213,7 +256,7 @@
     popupTemplate: popupTemplateA
  });
  
- graphicsLayer.add(pointGraphicA); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicA); 
 
  const pointZ = { 
     type: "point",
@@ -221,21 +264,20 @@
     latitude: 44.28384
  };
  
- const simpleMarkerSymbolZ = { // sets symbology for point
+ const simpleMarkerSymbolZ = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateZ = { // defines the pop-up with empty attributes
+ 
+  const popupTemplateZ = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesZ = { // applies the attributes to the pop-up
+ const attributesZ = { 
     Name: "Sobeys Flower Shop",
     Description: "Located between Lansdowne Street West and Clonsilla Avenue"
  } 
@@ -247,7 +289,7 @@
     popupTemplate: popupTemplateZ
  });
  
- graphicsLayer.add(pointGraphicZ); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicZ); 
 
  const pointY = { 
     type: "point",
@@ -255,21 +297,20 @@
     latitude: 44.29881
  };
  
- const simpleMarkerSymbolY = { // sets symbology for point
+ const simpleMarkerSymbolY = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateY = { // defines the pop-up with empty attributes
+
+  const popupTemplateY = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesY = { // applies the attributes to the pop-up
+ const attributesY = { 
     Name: "Tissue Flowers Pom Puffs & More",
     Description: "Located on Rubidge Street"
  } 
@@ -281,7 +322,7 @@
     popupTemplate: popupTemplateY
  });
  
- graphicsLayer.add(pointGraphicY); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicY); 
 
  const pointW = { 
     type: "point",
@@ -289,21 +330,20 @@
     latitude: 44.30350
  };
  
- const simpleMarkerSymbolW = { // sets symbology for point
+ const simpleMarkerSymbolW = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateW = { // defines the pop-up with empty attributes
+ 
+  const popupTemplateW = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesW = { // applies the attributes to the pop-up
+ const attributesW = { 
     Name: "Always In Bloom",
     Description: "Located on Charlotte Street"
  } 
@@ -315,7 +355,7 @@
     popupTemplate: popupTemplateW
  });
  
- graphicsLayer.add(pointGraphicW); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicW); 
 
  const pointX = { 
     type: "point",
@@ -323,21 +363,20 @@
     latitude: 44.30351
  };
  
- const simpleMarkerSymbolX = { // sets symbology for point
+ const simpleMarkerSymbolX = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateX = { // defines the pop-up with empty attributes
+ 
+  const popupTemplateX = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesX = { // applies the attributes to the pop-up
+ const attributesX = { 
     Name: "Pammett's Flower Shop",
     Description: "Located on Charlotte Street"
  } 
@@ -349,7 +388,7 @@
     popupTemplate: popupTemplateX
  });
  
- graphicsLayer.add(pointGraphicX); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicX); 
 
  const pointK = { 
     type: "point",
@@ -357,21 +396,20 @@
     latitude: 44.30479
  };
  
- const simpleMarkerSymbolK = { // sets symbology for point
+ const simpleMarkerSymbolK = { 
     type: "simple-marker",
-    color: [255, 20, 147],  // Pink
+    color: [255, 20, 147],  
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255], 
         width: 1
     }
  };
- // use this to set the point graphic
-  // Add a pop-up for the polygon layer on a click
-  const popupTemplateK = { // defines the pop-up with empty attributes
+
+  const popupTemplateK = { 
     title: "{Name}",
     content: "{Description}"
  }
- const attributesK = { // applies the attributes to the pop-up
+ const attributesK = { 
     Name: "Flowers & Gifts by Brenda",
     Description: "Located on Simcoe Street"
  } 
@@ -383,14 +421,29 @@
     popupTemplate: popupTemplateK
  });
  
- graphicsLayer.add(pointGraphicK); // add the newly created point to the graphics layer
+ graphicsLayer.add(pointGraphicK); 
  
  });
 
 
 </script>
 </head>
-<body>
-  <div id="viewDiv"></div>
-</body>
+    <body>
+        <div class="container">
+          <img src="funny_valentines_day_cards_banner.png" alt="val" width="440" height="200" style="width:100%;">
+          <div class="centered"> Flower Shops in Peterborough</div>
+      
+        </div>  
+          <div>
+          <p> Don't know where to buy flowers for you loved ones this Valentines day? Explore this map to find the perfect place to pick up flowers in Peterborough!</p>
+          <p>Click on each location to learn the name of the specified flower shop!</p>
+      
+          </div>
+      
+          <!-- use the id of the map to call in the map function-->
+        <div id="viewDiv"></div>
+        </div>
+      
+    </body>
 </html>
+
