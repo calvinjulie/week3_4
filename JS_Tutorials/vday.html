@@ -1,4 +1,4 @@
-<html>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -47,6 +47,32 @@
     longitude: 44.29262,
     latitude: -78.31098
  };
+
+ const simpleMarkerSymbolB = { // sets symbology for point
+    type: "simple-marker",
+    color: "pink",  
+    outline: {
+        color: [255, 255, 255], // White
+        width: 1
+    }
+ };
+ // use this to set the point graphic
+  // Add a pop-up for the polygon layer on a click
+  const popupTemplateB = { // defines the pop-up with empty attributes
+    title: "{Name}",
+ }
+ const attributesB = { // applies the attributes to the pop-up
+    Name: "McKnight's",
+ } 
+ 
+ const pointGraphicB = new Graphic({
+    geometry: pointB,
+    symbol: simpleMarkerSymbolB, 
+    attributes: attributesB,
+    popupTemplate: popupTemplateB
+ });
+ 
+ graphicsLayer.add(pointGraphicB); // add the newly created point to the graphics layer
 
  const pointC = { 
     type: "point",
